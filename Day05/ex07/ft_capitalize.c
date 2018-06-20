@@ -1,0 +1,54 @@
+#include <unistd.h>
+
+int	ft_putchar(char c)
+{
+	write(1,&c,1);
+}
+
+char	*ft_capitalize(char *str)
+{
+	int index;
+	index = 0;
+
+	if(str[index] >= 97 && str[index] <= 122)
+	{
+		str[index] = str[index] - 32;
+		ft_putchar(str[index]);
+		index++;
+	}
+	if(str[index] >= 65 && str[index] <= 90)
+	{
+		ft_putchar(str[index]);
+		index++;
+	}
+
+	while(str[index])
+	{
+		if(str[index] >= 65 && str[index] <= 90)
+		{
+			str[index] = str[index] + 32;
+			ft_putchar(str[index]);
+			index++;
+		}
+		if(str[index] >= 97 && str[index] <= 122)
+		{
+			ft_putchar(str[index]);
+			index++;
+		}
+		else
+		{
+			ft_putchar(str[index]);
+			++index;
+			str[index] = str[index] - 32;
+			ft_putchar(str[index]);
+			index++;
+		}
+	}
+	return(str);
+}
+
+int	main()
+{
+	ft_capitalize("tEsT Nb+uN");
+	return 0;
+}

@@ -1,0 +1,77 @@
+#include <unistd.h>
+
+int	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+int	*ft_strlowcase(char *str)
+{
+	int index = 0;
+
+	while(str[index])
+	{
+		if(str[index] == 'a')
+			str[index] == 'A';
+		
+		if(str[index] == 'b')
+			str[index] == 'B';
+		if(str[index] == 'c')
+			str[index] == 'C';
+		if(str[index] == 'd')
+			str[index] == 'D';
+		if(str[index] == 'e')
+			str[index] == 'E';
+		if(str[index] == 'f')
+			str[index] == 'F';
+		if(str[index] == 'g')
+			str[index] == 'G';
+		if(str[index] == 'h')
+			str[index] == 'H';
+		if(str[index] == 'i')
+			str[index] == 'I';
+		if(str[index] == 'j')
+			str[index] == 'J';
+		if(str[index] == 'k')
+			str[index] == 'K';
+		if(str[index] == 'l')
+			str[index] == 'L';
+		if(str[index] == 'm')
+			str[index] == 'M';
+		if(str[index] == 'n')
+			str[index] == 'N';
+		if(str[index] == 'o')
+			str[index] == 'O';
+		if(str[index] == 'p')
+			str[index] == 'P';
+		if(str[index] == 'q')
+			str[index] == 'Q';
+		if(str[index] == 'r')
+			str[index] == 'R';
+		if(str[index] == 's')
+			str[index] == 'S';
+		if(str[index] == 't')
+			str[index] == 'T';
+		if(str[index] == 'u')
+			str[index] == 'U';
+		if(str[index] == 'v')
+			str[index] == 'V';
+		if(str[index] == 'w')
+			str[index] == 'W';
+		if(str[index] == 'x')
+			str[index] == 'X';
+		if(str[index] == 'y')
+			str[index] == 'Y';
+		if(str[index] == 'z')
+			str[index] == 'Z';
+
+		ft_putchar(str[index]);
+		index++
+	}
+}
+
+int	main()
+{
+	ft_putstrupcase("test DE Base");
+	return 0;
+}
